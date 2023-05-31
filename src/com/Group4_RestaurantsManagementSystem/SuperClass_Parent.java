@@ -50,6 +50,16 @@ public class SuperClass_Parent {
     public double Drinks;
     public double TotalofMD;
     
+// This is the Tax Function
+    public double mcTax = 0.90;
+    
+    public Double cFindTax(double cAmount)
+    {
+        double FindTax = cAmount - (cAmount * mcTax);
+        return FindTax;
+    }
+    
+    //
 
 
     // A function to get the amount of the food and drinks
