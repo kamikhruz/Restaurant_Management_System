@@ -13,7 +13,17 @@ import static javax.swing.text.html.HTML.Tag.OPTION;
  * @author Kamie.K
  */
 
-    
+     // A function to get the amount of the food and drinks
+    public double GetAmount()
+    {
+        Meals = Filet_O_Fish + ChickenLegend + ChickenBurger + ChickenBurgerM + BaconCheeseBurger;
+        Drinks = MilkShake + VanillaCone + ClasVanilla + VanMilkShake + ChocMilkShake;
+        TotalofMD = Meals + Drinks;
+        AllTotalofMD = TotalofMD;
+       
+        return AllTotalofMD;    
+    }
+   
     
     
    
