@@ -568,7 +568,9 @@ public class Group4_RestaurantsManagementSystem extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnresetActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-   
+    #this is for the exit button
+     SubClass_Child iExit = new SubClass_Child();
+        iExit.iExitSystem();   
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jtxtCostDrinksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtCostDrinksActionPerformed

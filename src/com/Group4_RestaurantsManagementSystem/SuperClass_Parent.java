@@ -14,7 +14,18 @@ import static javax.swing.text.html.HTML.Tag.OPTION;
  */
 
     
-    
+     // The code block to exit
+    private JFrame frame;
+
+public void iExitSystem(){
+        frame = new JFrame("Exit");
+        
+        if (JOptionPane.showConfirmDialog(frame, "Confirm if you want to exit","Restaurant Management Systems",
+                JOptionPane.YES_NO_OPTION)  == JOptionPane.YES_NO_OPTION){
+            System.exit(0);
+        }
+        
+    }
     
    
     
