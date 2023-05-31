@@ -14,10 +14,10 @@ import static javax.swing.text.html.HTML.Tag.OPTION;
  */
 
    
-=======
+
 public class SuperClass_Parent {
   
-  >>>>>>> master
+
  // The prices of the food and drinks
     public double  ChickenBurger;
     public double  ChickenBurgerM;
@@ -50,7 +50,7 @@ public class SuperClass_Parent {
     public double Drinks;
     public double TotalofMD;
     
-  <<<<<<< Ivana
+
 
     // A function to get the amount of the food and drinks
     public double GetAmount()
@@ -76,7 +76,18 @@ public void iExitSystem(){
             System.exit(0);
         }
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
+}
     
   
     
