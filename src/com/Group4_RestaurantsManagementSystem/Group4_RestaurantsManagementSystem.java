@@ -554,21 +554,95 @@ public class Group4_RestaurantsManagementSystem extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtnreceiptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnreceiptActionPerformed
-     
+
+        
+        
+        //===============================================================
+        
+        int refs = 1325 + (int) (Math.random()*4238);
+        
+        
+        //=========================================================================
+        Calendar timer = Calendar.getInstance();
+        timer.getTime();
+        SimpleDateFormat tTime = new SimpleDateFormat("HH:mm:ss");
+        tTime.format(timer.getTime());
+        SimpleDateFormat Tdate = new SimpleDateFormat("dd-MM-yyyy");
+        Tdate.format(timer.getTime());
+        
+        
+                    
+                   jtxtReceipt.append("\tThe 360 Restaurant:\n" +
+                           "Reference:\t\t\t" + refs +
+                    "\n======================================\n" +
+                           
+                           "Meals:\t\t" + jtxtCostMeal.getText() + "\n\n" +
+                           "Drinks:\t\t" + jtxtCostDrinks.getText() + "\n\n" +
+                           "Cost of Items:\t\t" + jtxtCostTotalCost.getText() + "\n\n" +
+                    "\n======================================\n" + "\n\n" +
+                    "Tax:\t\t" + jtxtCostMeal.getText() + "\n\n" + 
+                           "Subtotal:\t\t" + jtxtSubTotal.getText() + "\n\n" +
+                           "Total:\t\t" + jtxtTotal.getText() + "\n\n" +
+                           
+                           
+                 "======================================" +
+                 "\nDate: " + Tdate.format(timer.getTime()) +
+                           "\tTime: " + tTime.format(timer.getTime()) +
+                           "\n\n\t\tThank you" );
+                 
+                           
         
         
         
     }//GEN-LAST:event_jbtnreceiptActionPerformed
 
     private void jbtnresetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnresetActionPerformed
+
+        JTextField cleartext = null;
     
+    //=======================================================
+     for (Component c:jPanel5.getComponents()){
+        if (c.getClass().toString().contains("javax.swing.JTextField")){
+            cleartext = (JTextField)c;
+            cleartext.setText("");
+        }
+    }
+     
+    //=====================================================================
+    
+     for (Component c:jPanel9.getComponents()){
+        if (c.getClass().toString().contains("javax.swing.JTextField")){
+            cleartext = (JTextField)c;
+            cleartext.setText("");
+        }
+    }
+    
+     //=============================================================================
+     for (Component c:jPanel8.getComponents()){
+        if (c.getClass().toString().contains("javax.swing.JTextField")){
+            cleartext = (JTextField)c;
+            cleartext.setText("0");
+        }
+    }
+    
+     //==============================================================================
+    for (Component c:jPanel7.getComponents()){
+        if (c.getClass().toString().contains("javax.swing.JTextField")){
+            cleartext = (JTextField)c;
+            cleartext.setText("0");
+        }
+    }
+    
+    jtxtReceipt.setText(null);
     //==========================================================================
     
     
     }//GEN-LAST:event_jbtnresetActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-   
+    #this is for the exit button
+     SubClass_Child iExit = new SubClass_Child();
+        iExit.iExitSystem();   
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jtxtCostDrinksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtCostDrinksActionPerformed
@@ -580,9 +654,56 @@ public class Group4_RestaurantsManagementSystem extends javax.swing.JFrame {
     }//GEN-LAST:event_jtxtSubTotalActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-    // This code snippet is used to calculate the total of all purchasable items and converts the datatype to double
+
+        // This code snippet is used to calculate the total of all purchasable items and converts the datatype to double
         
     
+        SubClass_Child ItemCost = new SubClass_Child();
+        
+        double iTax, iSubTotal, iTotal;
+    
+        
+        //Meals
+    ItemCost.BaconCheeseBurger      = ItemCost.pBaconCheeseBurger * Double.parseDouble(jtxtBaconCheeseBurger.getText()); 
+    ItemCost.ChickenBurger          = ItemCost.pChickenBurger * Double.parseDouble(jtxtChickenBurger.getText()); 
+    ItemCost.ChickenBurgerM         = ItemCost.pChickenBurgerM * Double.parseDouble(jtxtChickenBurgerM.getText()); 
+    ItemCost.ChickenLegend          = ItemCost.pChickenLegend * Double.parseDouble(jtxtChickenLegend.getText()); 
+    ItemCost.Filet_O_Fish           = ItemCost.pFilet_O_Fish * Double.parseDouble(jtxtFiletOFish.getText()); 
+    
+    //Drinks
+    ItemCost.ChocMilkShake          = ItemCost.pChocMilkShake * Double.parseDouble(jtxtChocolateMilkShake.getText()); 
+    ItemCost.ClasVanilla            = ItemCost.pClasVanilla * Double.parseDouble(jtxtClassicVanilla.getText()); 
+    ItemCost.MilkShake              = ItemCost.pMilkShake * Double.parseDouble(jtxtMilkShake.getText()); 
+    ItemCost.VanillaCone            = ItemCost.pVanillaCone * Double.parseDouble(jtxtVanillaCone.getText()); 
+    ItemCost.VanMilkShake           = ItemCost.pVanMilkShake * Double.parseDouble(jtxtVanillaMilkShake.getText());
+    
+    // This block of code runs the functions for Subtotal, Tax, and Total
+    iSubTotal = ItemCost.GetAmount(); 
+    iTax = ItemCost.cFindTax(iSubTotal);
+    iTotal = iSubTotal + iTax;
+    
+    
+    String SubTotal = String.format("$%.2f", iSubTotal);
+     jtxtSubTotal.setText(SubTotal);
+     
+     String Tax = String.format("$%.2f", iTax);
+     jtxtTax.setText(Tax);
+     
+     String Total = String.format("$%.2f", iTotal);
+     jtxtTotal.setText(Total);
+     //=============================================================================
+     
+     //This block of code runs the functions for the Costs of Meals, Drinks and Total Cost
+     
+     String Meal = String.format("$%.2f", ItemCost.Meals);
+     jtxtCostMeal.setText(Meal);
+     
+     String Drink = String.format("$%.2f", ItemCost.Drinks);
+     jtxtCostDrinks.setText(Drink);
+     
+     String TotalCost = String.format("$%.2f", ItemCost.TotalofMD);
+     jtxtCostTotalCost.setText(TotalCost);
+     
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jtxtFiletOFishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtFiletOFishActionPerformed
