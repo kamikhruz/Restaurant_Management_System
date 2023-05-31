@@ -12,7 +12,12 @@ import static javax.swing.text.html.HTML.Tag.OPTION;
  *
  * @author Kamie.K
  */
+
+   
+=======
 public class SuperClass_Parent {
+  
+  >>>>>>> master
  // The prices of the food and drinks
     public double  ChickenBurger;
     public double  ChickenBurgerM;
@@ -31,7 +36,18 @@ public class SuperClass_Parent {
     public double Drinks;
     public double TotalofMD;
     
-    
+  <<<<<<< Ivana
+
+    // A function to get the amount of the food and drinks
+    public double GetAmount()
+    {
+        Meals = Filet_O_Fish + ChickenLegend + ChickenBurger + ChickenBurgerM + BaconCheeseBurger;
+        Drinks = MilkShake + VanillaCone + ClasVanilla + VanMilkShake + ChocMilkShake;
+        TotalofMD = Meals + Drinks;
+        AllTotalofMD = TotalofMD;
+       
+        return AllTotalofMD;    
+    }
     public double AllTotalofMD;
 
     
