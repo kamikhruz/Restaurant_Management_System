@@ -12,6 +12,27 @@ import static javax.swing.text.html.HTML.Tag.OPTION;
  *
  * @author Kamie.K
  */
+public class SuperClass_Parent {
+ // The prices of the food and drinks
+    public double  ChickenBurger;
+    public double  ChickenBurgerM;
+    public double  ChickenLegend;
+    public double  Filet_O_Fish;
+    public double  BaconCheeseBurger;
+    
+    public double MilkShake;
+    public double VanillaCone;
+    public double ClasVanilla;
+    public double ChocMilkShake;
+    public double VanMilkShake;
+    
+    
+    public double Meals;
+    public double Drinks;
+    public double TotalofMD;
+    
+    
+    public double AllTotalofMD;
 
     
     
