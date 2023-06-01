@@ -14,7 +14,7 @@ import static javax.swing.text.html.HTML.Tag.OPTION;
  */
 
    
-
+// This class holds functions for various parts of the code
 public class SuperClass_Parent {
   
 

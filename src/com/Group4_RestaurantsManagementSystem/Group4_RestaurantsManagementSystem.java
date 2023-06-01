@@ -565,7 +565,7 @@ public class Group4_RestaurantsManagementSystem extends javax.swing.JFrame {
     private void jbtnreceiptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnreceiptActionPerformed
 
         
-        
+        //Creates the receipt for the food and drinks
         //===============================================================
         
         int refs = 1325 + (int) (Math.random()*4238);
@@ -606,7 +606,7 @@ public class Group4_RestaurantsManagementSystem extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnreceiptActionPerformed
 
     private void jbtnresetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnresetActionPerformed
-
+        //creates the function for the reset button
         JTextField cleartext = null;
     
     //=======================================================
@@ -726,6 +726,7 @@ public class Group4_RestaurantsManagementSystem extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    // This is the main method of the program
     public static void main(String args[]) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
