@@ -37,13 +37,13 @@ public class SuperClass_Parent {
     public double  pChickenBurgerM = 2.95;
     public double  pChickenLegend = 3.98;
     public double  pFilet_O_Fish = 2.65;
-    public double  pBaconCheeseBurger = 3.64;
+    public double  pBaconCheeseBurger = 6.76;
     
-    public double pMilkShake = 2.10;
-    public double pVanillaCone = 2.20;
-    public double pClasVanilla = 2.50;
-    public double pChocMilkShake = 1.95;
-    public double pVanMilkShake = 2.37;
+    public double pMilkShake = 2.69;
+    public double pVanillaCone = 2.98;
+    public double pClasVanilla = 2.45;
+    public double pChocMilkShake = 1.34;
+    public double pVanMilkShake = 2.78;
     //=================================================
     
     public double Meals;
