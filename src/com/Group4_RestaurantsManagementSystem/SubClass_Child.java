@@ -8,6 +8,7 @@ package com.Group4_RestaurantsManagementSystem;
  *
  * @author Kamie.K
  */
+// This class extends the SuperClass_Parent functions to other parts of the code
 public class SubClass_Child extends SuperClass_Parent {
     
 }
